@@ -55,8 +55,8 @@ const App: () => Node = () => {
     };
 
     function getHistogramTitle(histogramType) {
-        const buttons = ["Total", "Acre", "Coconat oil (tn)", "Coconat oil (kg)"];
-        return `Histogram of ${buttons[histogramType]} values`;
+        const buttons = ["Total Trees", "Acre Areas", "Product Per Month", "Product Per Year"];
+        return `Chart of ${buttons[histogramType]} values`;
     }
 
     const backgroundStyle = {

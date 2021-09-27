@@ -22,10 +22,10 @@ export default class Histogram extends Component {
                 createdData = data.map((row) => parseFloat(row.acre));
                 break;
             case 2:
-                createdData = data.map((row) => parseFloat(row.coconat_oil_tn));
+                createdData = data.map((row) => parseFloat(row.product_month));
                 break;
             case 3:
-                createdData = data.map((row) => parseFloat(row.coconat_oil_kg));
+                createdData = data.map((row) => parseFloat(row.product_year));
                 break;
             default:
                 createdData = data.map((row) => parseFloat(row.total));
@@ -33,10 +33,14 @@ export default class Histogram extends Component {
         return createdData;
     }
 
+    createDataLabals(data) {
+        return data.map((row) => row.label);
+    }
+
     render() {
         const histogramType = this.props.type;
         const data = {
-            labels: this.createData(Object.values(data_mock), histogramType),
+            labels: this.createDataLabals(Object.values(data_mock)),
             datasets: [
                 {
                     data: this.createData(Object.values(data_mock), histogramType),

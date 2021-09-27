@@ -1,6 +1,6 @@
-import React, { Component, useState } from "react";
-import { Dimensions, StyleSheet } from "react-native";
-import { ButtonGroup } from "react-native-elements";
+import React, {Component, useState} from "react";
+import {Dimensions, StyleSheet} from "react-native";
+import {ButtonGroup} from "react-native-elements";
 
 const screenWidth = Dimensions.get("window").width;
 
@@ -16,16 +16,16 @@ export default class HistogramType extends Component {
 
     render() {
         const histogramType = this.props.value != undefined ? this.props.value : 0;
-        const buttons = ["Total", "Acre", "Coconat oil (tn)", "Coconat oil (kg)"];
+        const buttons = ["Total Trees", "Acre areas", "Product Per Month", "Product Per Year"];
 
         return (
             <ButtonGroup
-                selectedButtonStyle={{ backgroundColor: "#037d50" }}
+                selectedButtonStyle={{backgroundColor: "#037d50"}}
                 onPress={this.handleChange}
                 selectedIndex={histogramType}
                 buttons={buttons}
                 containerStyle={styles.container}
-                textStyle={{ fontSize: 18 }}
+                textStyle={{fontSize: 18}}
             />
         );
     }
