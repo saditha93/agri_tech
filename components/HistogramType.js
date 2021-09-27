@@ -16,7 +16,7 @@ export default class HistogramType extends Component {
 
     render() {
         const histogramType = this.props.value != undefined ? this.props.value : 0;
-        const buttons = ["Total", "Acre", "Olive oil (tn)", "Olive oil (kg)"];
+        const buttons = ["Total", "Acre", "Coconat oil (tn)", "Coconat oil (kg)"];
 
         return (
             <ButtonGroup

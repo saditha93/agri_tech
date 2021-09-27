@@ -22,10 +22,10 @@ export default class Histogram extends Component {
                 createdData = data.map((row) => parseFloat(row.acre));
                 break;
             case 2:
-                createdData = data.map((row) => parseFloat(row.olive_oil_tn));
+                createdData = data.map((row) => parseFloat(row.coconat_oil_tn));
                 break;
             case 3:
-                createdData = data.map((row) => parseFloat(row.olive_oil_kg));
+                createdData = data.map((row) => parseFloat(row.coconat_oil_kg));
                 break;
             default:
                 createdData = data.map((row) => parseFloat(row.total));
