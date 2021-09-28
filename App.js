@@ -17,9 +17,9 @@ import {
     LearnMoreLinks,
     ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import HeaderComponent from "./components/HeaderComponent";
-import HistogramType from "./components/HistogramType";
-import Histogram from "./components/Histogram";
+import HeaderComponent from "./components/Header/HeaderComponent";
+import ChartsType from "./components/Charts/ChartsType";
+import Charts from "./components/Charts/Charts";
 
 const Section = ({children, title}): Node => {
     const isDarkMode = useColorScheme() === 'dark';
@@ -49,14 +49,14 @@ const Section = ({children, title}): Node => {
 
 const App: () => Node = () => {
     const isDarkMode = useColorScheme() === 'dark';
-    const [histogramType, setHistogramType] = useState(0);
-    const handleTypeChange = (histogramType) => {
-        setHistogramType(histogramType);
+    const [chartType, setChartType] = useState(0);
+    const handleTypeChange = (chartType) => {
+        setChartType(chartType);
     };
 
-    function getHistogramTitle(histogramType) {
+    function getChartTitle(chartType) {
         const buttons = ["Total Trees", "Acre Areas", "Product Per Month", "Product Per Year"];
-        return `Chart of ${buttons[histogramType]} values`;
+        return `Chart of ${buttons[chartType]} values`;
     }
 
     const backgroundStyle = {
@@ -71,18 +71,18 @@ const App: () => Node = () => {
                 style={backgroundStyle}>
                 {/*<Header/>*/}
                 <HeaderComponent></HeaderComponent>
-                <HistogramType
-                    value={histogramType}
+                <ChartsType
+                    value={chartType}
                     onTypeChange={handleTypeChange}
-                ></HistogramType>
-                <Histogram type={histogramType}></Histogram>
+                ></ChartsType>
+                <Charts type={chartType}></Charts>
                 <View
                     style={{
                         backgroundColor: isDarkMode ? Colors.black : Colors.white,
                     }}>
                     <Section title="Agri Tech">
-                        <Text style={styles.histogramTitle}>
-                            {getHistogramTitle(histogramType)}
+                        <Text style={styles.chartTitle}>
+                            {getChartTitle(chartType)}
                         </Text>
                     </Section>
                 </View>
@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
     highlight: {
         fontWeight: '700',
     },
-    histogramTitle: {
+    chartTitle: {
         fontWeight: "bold",
         fontSize: 20,
     },

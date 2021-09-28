@@ -2,12 +2,12 @@ import React, {Component} from "react";
 import {Dimensions, StyleSheet, View} from "react-native";
 import {BarChart} from "react-native-chart-kit";
 
-import data_mock from "../mock/co2_data.json";
+import data_mock from "../../mock/co2_data.json";
 
 const screenWidth = Dimensions.get("window").width;
 const screenHeight = Dimensions.get("window").height;
 
-export default class Histogram extends Component {
+export default class Charts extends Component {
     constructor(props) {
         super(props);
     }
