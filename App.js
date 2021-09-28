@@ -20,6 +20,7 @@ import {
 import HeaderComponent from "./components/Header/HeaderComponent";
 import ChartsType from "./components/Charts/ChartsType";
 import Charts from "./components/Charts/Charts";
+import Location from "./components/Location/Location";
 
 const Section = ({children, title}): Node => {
     const isDarkMode = useColorScheme() === 'dark';
@@ -70,12 +71,10 @@ const App: () => Node = () => {
                 contentInsetAdjustmentBehavior="automatic"
                 style={backgroundStyle}>
                 {/*<Header/>*/}
-                <HeaderComponent></HeaderComponent>
-                <ChartsType
-                    value={chartType}
-                    onTypeChange={handleTypeChange}
-                ></ChartsType>
-                <Charts type={chartType}></Charts>
+                <HeaderComponent/>
+                <Location/>
+                <ChartsType value={chartType} onTypeChange={handleTypeChange}/>
+                <Charts type={chartType}/>
                 <View
                     style={{
                         backgroundColor: isDarkMode ? Colors.black : Colors.white,
