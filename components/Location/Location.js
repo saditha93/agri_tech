@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
         width: screenWidth,
         fontWeight: "bold",
         fontSize: 20,
-        color:"#062f1f",
+        color: "#062f1f",
         textAlignVertical: "center",
         minHeight: screenHeight / 15,
     },
