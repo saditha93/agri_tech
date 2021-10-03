@@ -10,6 +10,8 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "3": "^2.1.0",
+    "@react-native-firebase/app": "^12.8.0",
     "atob": "^2.1.2",
     "jsesc": "^3.0.2",
     "metro-source-map": "^0.66.2",
