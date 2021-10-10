@@ -15,6 +15,7 @@ import HeaderComponent from "./components/Header/HeaderComponent";
 import ChartsType from "./components/Charts/ChartsType";
 import Charts from "./components/Charts/Charts";
 import Location from "./components/Location/Location";
+import ChartFirebase from "./components/Charts/ChartFirebase";
 
 const Section = ({children, title}): Node => {
     const isDarkMode = useColorScheme() === 'dark';
@@ -69,6 +70,7 @@ const App: () => Node = () => {
                 <Location/>
                 <ChartsType value={chartType} onTypeChange={handleTypeChange}/>
                 <Charts type={chartType}/>
+                <ChartFirebase/>
                 <View
                     style={{
                         backgroundColor: isDarkMode ? Colors.black : Colors.white,
